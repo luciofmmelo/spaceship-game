@@ -15,5 +15,35 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <container id="space">
+        <img src="../assets/space.gif"
+             id="space1"/>
+        <img src="../assets/space.gif"
+             id="space2"/>
+    </container>
+    <container id="scene">
+            <div id="spaceship"></div>
+            <header id="menu-score">
+                    <div id="life"> Life: 100 </div>
+                    <div id="score"> Score: 0 </div>
+            </header>
+            <button type="button"
+                    id="btn-start"
+                    class="btn">
+                    Start
+            </button>
+            <button type="button"
+                    id="btn-pause"
+                    class="btn">
+                    Return
+            </button> 
+    </container>
+    <menu class="menu-gameover">
+          <span>Game Over</span>
+          <button type="button"
+                  id="btn-reset"
+                  class="btn">
+                  Start
+    </button>
+    </menu>
 </body>
