@@ -16,14 +16,15 @@
 </head>
 <body>
     <container id="space">
-        <img src="../assets/space.gif"
+        <img src="./assets/images/espaco.gif"
              id="space1"/>
-        <img src="../assets/space.gif"
+        <img src="./assets/images/espaco.gif"
              id="space2"/>
     </container>
     <container id="scene">
             <div id="spaceship"></div>
-            <header id="menu-score">
+            <header id="menu-score"
+                    class="menu">
                     <div id="life"> Life: 100 </div>
                     <div id="score"> Score: 0 </div>
             </header>
@@ -38,12 +39,13 @@
                     Return
             </button> 
     </container>
-    <menu class="menu-gameover">
+    <menu id="menu-gameover"
+          class="menu">
           <span>Game Over</span>
           <button type="button"
                   id="btn-reset"
                   class="btn">
-                  Start
-    </button>
+                  Restart
+          </button>
     </menu>
 </body>

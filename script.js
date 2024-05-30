@@ -26,9 +26,13 @@ let score = 0;
 let enemyLife = 5;
 let pause = true;
 let shooting = false;
-const shipVelocity = 15;
-const shotVelocity = 15;
-const enemyShipVelocity = 10;
+
+let shipFrequency = 15;
+let shotFrequency = 15;
+let newShotFrequency = 50;
+let enemyShipFrequency = 10;
+let newEnemyShipFrequency = 2500;
+
 const initialPositionX = (sceneWidth - shipWidth) / 2;
 const initialPositionY = sceneHeight - shipHeight;
 let positionX = initialPositionX;
@@ -36,61 +40,90 @@ let positionY = initialPositionY;
 let directionX = 0;
 let directionY = 0;
 
-// Função para criar elementos
+// Funções para criar elementos
+
 const createElement = (tag, className) => { };
 
-// Função para criar tiros
 const createShots = () => { };
 
-// Função para criar naves inimigas
 const createEnemyShip = () => { };
 
-// Função para alterar a direção do movimento da nave
+const createMagicalItems = () => { }
+
+// Funções para alterar a direção do movimento da nave
+
 const changeDirection = (event) => { };
 
-// Função para parar a direção do movimento da nave
 const stopDirection = (event) => { };
 
-// Função para mover a nave
 const moveShip = () => { };
 
 // Função para mover os tiros
+
 const moveShots = () => { };
 
-// Função para iniciar e parar os tiros
 const handleShooting = (event) => { };
 
-// Função para mover naves inimigas
+// Funções para mover naves inimigas e items magicos
+
 const moveEnemyShips = () => { };
 
-// Função para verificar acertos nos inimigos
+const moveMagicalItems = () => { };
+
+// Função para verificar colisões
+
 const checkHitTheTarget = () => { };
 
-// Função para iniciar o jogo
-const handleStart = () => { };
+const checkEnemiesWhithBase = () => { };
 
-// Função para pausar o jogo
+const checkCollisionWithEnemies = () => { };
+
+const checkGetMagicalItems = () => { };
+
+// Funções de controle dos botões
+
+const handleStart = (event) => { };
+
 const handlePause = (event) => { };
 
-// Função para resetar o jogo
+const togglePause = (event) => { };
+
 const handleReset = (event) => { };
 
-// Função para alternar entre pausa e jogo ativo
-const togglePause = () => { };
-
 // Função para definir o nível de desfoque dos elementos
-const setElementsBlur = (level) => { };
 
-// Função placeholder para encerrar o jogo
+const setElementsBlur = () => { };
+
+// Funções de controle do fluxo do jogo
+
+const loadGame = () => {
+    if (pause) return;
+    
+    setInterval(moveShip, shipFrequency);
+
+    setInterval(createShots, newShotFrequency);
+    setInterval(moveShots, shotFrequency);
+    setInterval(createEnemyShip, newEnemyShipFrequency);
+    setInterval(moveEnemyShips, enemyShipFrequency);
+    setIntervel(createMagicalItems, newMagicalItemsFrequency);
+    setIntervel(moveMagicalItems, magicalItensFrequency);
+
+    setInterval(checkHitTheTarget, 10);
+    setInterval(checkEnemiesWhithBase, 10);
+    setInterval(checkCollisionWithEnemies, 10);
+    setInterval(checkGetMagicalItems, 10);
+
+    music.play();
+};
+
 const gameOver = () => { };
 
-// Função para carregar o jogo
-const loadGame = () => { };
+const resetGame = () => {
+    
+};
 
-// Função placeholder para resetar o jogo
-const resetGame = () => { };
+// Escutadores de eventos
 
-// Adicionando event listeners para os controles do jogo
 buttonPlay.addEventListener('click', handleStart);
 buttonPause.addEventListener('click', togglePause);
 buttonReset.addEventListener('click', handleReset);
