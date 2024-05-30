@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+
+/* BACKGROUND SPACE */
+
+#space {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#space1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    animation: space-animation1 12s infinite linear;
+}
+
+#space2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    animation: space-animation2 12s infinite linear;
+}
+
+@keyframes space-animation1 {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 0%;
+    }
+}
+
+@keyframes space-animation2 {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+/* CONTAINER AND WRAPPERS */
+
+#scene {
+    
+}
+
+#menu-score {
+    
+}
+
+#life {
+
+}
+
+#score {
+
+}
+
+#menu-gameover {
+
+}
+
+#menu-gameover > span {
+    
+}
+
+/* BUTTONS */
+
+.btn {
+    
+}
+
+.btn:hover {
+    
+}
+
+/* OBJECTS */
+
+#spaceship {
+    
+}
+
+.shot {
+    
+}
+
+.enemyship {
+    
+}
+
+.specialItens {
+
+}
